@@ -1,17 +1,19 @@
+import { Menu, MenuItem } from "semantic-ui-react";
 import styled from "styled-components";
 
 export default function AppBar() {
   return (
-    <AppBarStyled>
-      <Text>asdf</Text>
-    </AppBarStyled>
+    <Menu>
+      <Logo>dlog</Logo>
+      <MenuItem name="기록" active href="/log">
+        기록
+      </MenuItem>
+    </Menu>
   );
 }
 
-const Text = styled.div``;
-
-const AppBarStyled = styled.div`
-  ${Text} {
-    color: #ccc;
-  }
+const Logo = styled(MenuItem)`
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  font-size: 1.5rem;
 `;
