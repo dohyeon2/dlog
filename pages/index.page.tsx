@@ -1,5 +1,5 @@
+import AppBar from "components/AppBar";
 import type { NextPage } from "next";
-import AppBar from "../components/Appbar";
 
 const Home: NextPage = () => {
   return (
