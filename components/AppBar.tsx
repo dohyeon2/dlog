@@ -1,9 +1,9 @@
 import { Menu, MenuItem } from "semantic-ui-react";
 import styled from "styled-components";
 
-export default function AppBar() {
+export function AppBar({ className }: { className?: string }) {
   return (
-    <Menu>
+    <Menu className={className}>
       <Logo>dlog</Logo>
       <MenuItem name="기록" active href="/log">
         기록
@@ -11,6 +11,10 @@ export default function AppBar() {
     </Menu>
   );
 }
+
+const StyledAppBar = styled(AppBar)``;
+
+export default StyledAppBar;
 
 const Logo = styled(MenuItem)`
   font-family: "Libre Baskerville", serif;

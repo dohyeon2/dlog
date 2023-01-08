@@ -1,7 +1,8 @@
+import Editor from "components/Editor";
 import { NextPageWithLayout } from "pages/_app.page";
 
 const Log: NextPageWithLayout = () => {
-  return <div></div>;
+  return <Editor />;
 };
 
 export default Log;
