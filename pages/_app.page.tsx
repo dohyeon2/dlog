@@ -4,6 +4,7 @@ import { AppProps } from "next/app";
 import { ReactElement, ReactNode } from "react";
 import "semantic-ui-css/semantic.min.css";
 import "styles/fonts.css";
+import "styles/index.css";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -12,6 +13,7 @@ export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
+
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout =
     Component.getLayout || ((page: ReactElement) => <Layout>{page}</Layout>);

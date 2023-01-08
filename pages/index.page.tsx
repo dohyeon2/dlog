@@ -1,12 +1,7 @@
-import AppBar from "components/AppBar";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
-  return (
-    <div>
-      <AppBar />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Home;
